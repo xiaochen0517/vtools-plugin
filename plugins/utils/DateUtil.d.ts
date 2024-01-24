@@ -9,6 +9,8 @@ export class DateUtil {
 
   static fmtDateNow(fmt: string): string;
 
+  static fmtSimpleDate(date: Date): string;
+
   static fmtSimpleDateNow(): string;
 
   static dateRangeByYearAndWeek(year: number, week: number): DateRange;

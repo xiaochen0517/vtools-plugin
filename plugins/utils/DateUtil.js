@@ -20,8 +20,12 @@ export class DateUtil {
     return this.fmtDate(new Date(), fmt);
   }
 
+  static fmtSimpleDate(date) {
+    return this.fmtDate(date, 'YYYY-MM-DD');
+  }
+
   static fmtSimpleDateNow() {
-    return this.fmtDateNow('YYYY-MM-DD HH:mm:ss');
+    return this.fmtSimpleDate(new Date());
   }
 
   static dateRangeByYearAndWeek(year, weekNum) {
