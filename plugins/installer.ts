@@ -1,9 +1,9 @@
-import {StrUtil} from "./utils";
-import {DateUtil} from "./utils";
+import {ArrayUtil, DateUtil, StrUtil} from "./utils";
 
 const utils = [
   StrUtil,
   DateUtil,
+  ArrayUtil,
 ];
 
 export const Installer = {
