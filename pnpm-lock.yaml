@@ -5,8 +5,11 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@vue/runtime-core':
+    specifier: ^3.4.15
+    version: 3.4.15
   vue:
-    specifier: ^3.3.11
+    specifier: ^3.4.15
     version: 3.4.15(typescript@5.3.3)
 
 devDependencies:

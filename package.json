@@ -1,6 +1,6 @@
 {
   "name": "vtools-plugin",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "main": "./plugins/index.ts",
   "types": "./plugins/index.d.ts",
@@ -20,7 +20,8 @@
     "tsc": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "vue": "^3.3.11"
+    "@vue/runtime-core": "^3.4.15",
+    "vue": "^3.4.15"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
