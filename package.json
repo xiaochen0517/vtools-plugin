@@ -1,9 +1,9 @@
 {
   "name": "vtools-plugin",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "type": "module",
   "main": "./plugins/index.ts",
-  "types": "./plugins/index.ts",
+  "types": "./plugins/index.d.ts",
   "exports": {
     ".": "./plugins/index.ts"
   },

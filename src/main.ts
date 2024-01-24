@@ -1,10 +1,10 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
-import WeiTool from "../plugins/index.ts";
+import VTools from "../plugins/index.ts";
 
 let app = createApp(App);
 
-app.use(WeiTool);
+app.use(VTools);
 
 app.mount('#app')

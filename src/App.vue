@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import {getCurrentInstance, onMounted} from "vue";
 
 const instance = getCurrentInstance();
@@ -8,13 +7,13 @@ onMounted(() => {
     return;
   }
   console.log(instance);
-  console.log(instance.proxy?.$StrUtil.isEmpty(""));
+  console.log(instance.proxy?.vtools.StrUtil.isEmpty(""));
 });
 </script>
 
 <template>
   <div>
-    {{$StrUtil.isEmpty("")}}
-    {{$StrUtil.isEmpty("123")}}
+    {{ vtools.StrUtil.isEmpty("") }}
+    {{ vtools.StrUtil.isEmpty("123") }}
   </div>
 </template>

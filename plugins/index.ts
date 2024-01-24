@@ -1,12 +1,5 @@
-import {FullInstaller as VTools} from "./FullInstaller";
-import {StrUtil} from "./utils/StrUtil.ts";
+import {Installer as VTools} from "./installer.ts";
 
-export {StrUtil};
-
+export {StrUtil} from "./utils";
 export default VTools;
 
-declare module '@vue/runtime-core' {
-  interface ComponentCustomProperties {
-    $StrUtil: typeof StrUtil
-  }
-}
