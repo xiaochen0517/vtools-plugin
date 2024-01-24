@@ -37,4 +37,24 @@ export class DateUtil {
       end: end.toDate()
     };
   }
+
+  static yearAndWeekOfDate(date) {
+    dayjs.extend(weekOfYear);
+    const year = dayjs(date).year();
+    const week = dayjs(date).week();
+    return {
+      year: year,
+      week: week
+    };
+  }
+
+  static yearAndWeekOfDateNow() {
+    return this.yearAndWeekOfDate(new Date());
+  }
+
+  static yearAndPastWeekOfNow() {
+    let yearAndWeek = this.yearAndWeekOfDateNow();
+    yearAndWeek.week = yearAndWeek.week - 1;
+    return yearAndWeek;
+  }
 }

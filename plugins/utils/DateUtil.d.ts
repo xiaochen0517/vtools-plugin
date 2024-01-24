@@ -3,6 +3,11 @@ export type DateRange = {
   end: Date;
 };
 
+export type YearAndWeek = {
+  year: number;
+  week: number;
+};
+
 export class DateUtil {
 
   static fmtDate(date: Date, fmt: string): string;
@@ -14,4 +19,10 @@ export class DateUtil {
   static fmtSimpleDateNow(): string;
 
   static dateRangeByYearAndWeek(year: number, week: number): DateRange;
+
+  static yearAndWeekOfDate(date: Date): YearAndWeek;
+
+  static yearAndWeekOfDateNow(): YearAndWeek;
+
+  static yearAndPastWeekOfNow(): YearAndWeek;
 }
