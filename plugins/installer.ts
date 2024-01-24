@@ -1,7 +1,9 @@
 import {StrUtil} from "./utils";
+import {DateUtil} from "./utils";
 
 const utils = [
   StrUtil,
+  DateUtil,
 ];
 
 export const Installer = {

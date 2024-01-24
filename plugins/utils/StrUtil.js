@@ -18,4 +18,25 @@ export class StrUtil {
     return !this.isEmpty(str);
   }
 
+  static isBlank(str) {
+    if (this.isEmpty(str)) {
+      return true;
+    }
+    return str.trim().length === 0;
+  }
+
+  static isNotBlank(str) {
+    return !this.isBlank(str);
+  }
+
+  static isNumeric(str) {
+    if (this.isBlank(str)) {
+      return false;
+    }
+    return !isNaN(str) && !isNaN(parseFloat(str));
+  }
+
+  static isNotNumeric(str) {
+    return !this.isNumeric(str);
+  }
 }
