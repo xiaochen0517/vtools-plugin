@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import {StrUtil} from "./StrUtil.js";
 import {warn} from "../logs/Logs.ts";
+import weekOfYear from "dayjs/plugin/weekOfYear";
 
 export class DateUtil {
 
@@ -21,5 +22,15 @@ export class DateUtil {
 
   static fmtSimpleDateNow() {
     return this.fmtDateNow('YYYY-MM-DD HH:mm:ss');
+  }
+
+  static dateRangeByYearAndWeek(year, weekNum) {
+    dayjs.extend(weekOfYear);
+    const start = dayjs().year(year).week(weekNum).startOf('week');
+    const end = dayjs().year(year).week(weekNum).endOf('week');
+    return {
+      start: start.toDate(),
+      end: end.toDate()
+    };
   }
 }
