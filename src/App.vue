@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import {getCurrentInstance, onMounted} from "vue";
+import StrUtil from "../plugins/utils/StrUtil";
 
 const instance = getCurrentInstance();
 onMounted(() => {
   if (!instance) {
     return;
   }
-  console.log(instance);
-  console.log(instance.proxy?.vtools.StrUtil.isEmpty(""));
+  console.log(StrUtil.isEmpty(""));
 });
 </script>
 
 <template>
   <div>
-    {{ vtools.StrUtil.isEmpty("") }}
-    {{ vtools.StrUtil.isEmpty("123") }}
+    {{ StrUtil.isEmpty("") }}
+    {{ StrUtil.isEmpty("123") }}
   </div>
 </template>
