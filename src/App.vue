@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {getCurrentInstance, onMounted} from "vue";
-import StrUtil from "../plugins/utils/StrUtil";
+import {StrUtil} from "../plugins";
 
 const instance = getCurrentInstance();
 onMounted(() => {
